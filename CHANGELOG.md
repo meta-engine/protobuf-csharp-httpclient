@@ -2,6 +2,13 @@
 
 See the [NuGet versions page](https://www.nuget.org/packages/MetaEngine.CSharp.Protobuf.HttpClient.Tool#versions-body-tab) for the full version history.
 
+## 1.0.1
+
+### Bug Fixes
+
+- **`--documentation` comments bind to their member.** A property carrying both a doc comment and an attribute (e.g. with `--validation-annotations`) emitted the `/// <summary>` between the attribute and the property, leaving it orphaned. The doc comment now renders above the attributes.
+- **Consistent indentation in generated client methods.** Some service method bodies were dedented; all generated client code is now uniformly indented.
+
 ## 1.0.0
 
 - Initial release — C# code generation from Protobuf (`.proto`) definitions, distributed as a dotnet tool
